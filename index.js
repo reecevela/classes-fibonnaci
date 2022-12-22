@@ -3,7 +3,7 @@ class NumericalAlgorithm {
         this.start = start;
     }
     current() {
-        return this.current;
+        return this.start;
     }
 }
 
@@ -16,12 +16,13 @@ class Fibonnaci extends NumericalAlgorithm {
         this.previous.push(
             (this.previous[this.previous.length - 1]) + (this.previous[this.previous.length - 2])
         );
-        return this.previous[this.previous.length - 2];
+        return this.previous[this.previous.length - 1];
     }
 }
 
 const fib = new Fibonnaci();
 
+console.log(fib.current());
 console.log(fib.nextFib());
 console.log(fib.nextFib());
 console.log(fib.nextFib());
